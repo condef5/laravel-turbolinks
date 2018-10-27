@@ -31,8 +31,12 @@
                             </figure>
                             </td>
                             <td>
-                                <a href="">Editar</a>
-                                <a href="">Eliminar</a>
+                                <a href="{{ route('animes.edit', $anime->id) }}" class="btn btn-link">Editar</a>
+                                <form action="{{ route('animes.destroy', $anime->id)}}" method="post" class="inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-link" type="submit">Eliminar</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
