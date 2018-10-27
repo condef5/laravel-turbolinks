@@ -10466,15 +10466,14 @@ a.text-dark:focus {
   }
 }
 
+.inline {
+  display: inline-block;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
-.turbolinks-progress-bar {
-  height: 5px;
-  background-color: blue;
 }
 
 figure {
@@ -10484,6 +10483,16 @@ figure {
 table figure {
   width: 75px;
   height: 55px;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.table th:last-child {
+  width: 170px;
+  text-align: center;
 }
 
 .card .preview {
