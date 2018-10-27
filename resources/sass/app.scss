@@ -18,8 +18,15 @@
   background-color: blue;
 }
 
+figure {
+  margin: 0;
+}
+
 table figure {
   width: 75px;
-  margin: 0;
   height: 55px;
+}
+
+.card .preview{
+  height: 261px;
 }
