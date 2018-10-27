@@ -13910,7 +13910,13 @@ window.Vue = __WEBPACK_IMPORTED_MODULE_2_vue___default.a;
 window.Notify = __WEBPACK_IMPORTED_MODULE_3_handy_notification___default.a;
 
 $(document).ready(function () {
-    $('.js-example-basic-single').select2();
+    $('.select2').select2({
+        placeholder: {
+            id: '-1', // the value of the option
+            text: 'Select an option'
+        },
+        theme: "bootstrap4"
+    });
 });
 
 // document.addEventListener("turbolinks:load", function() {

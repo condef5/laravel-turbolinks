@@ -10,7 +10,13 @@ window.Vue = vue
 window.Notify = Notify
 
 $(document).ready(function() {
-    $('.js-example-basic-single').select2();
+    $('.select2').select2({
+        placeholder: {
+            id: '-1', // the value of the option
+            text: 'Select an option'
+        },
+        theme: "bootstrap4"
+    });
 });
 
 // document.addEventListener("turbolinks:load", function() {

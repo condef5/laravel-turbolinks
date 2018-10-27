@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@ttskch/select2-bootstrap4-theme@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@ttskch/select2-bootstrap4-theme/-/select2-bootstrap4-theme-1.0.4.tgz#d823d02b6a611b8dfd36f21a57c9f2abe4a1679c"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

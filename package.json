@@ -20,6 +20,7 @@
         "vue": "^2.5.17"
     },
     "dependencies": {
+        "@ttskch/select2-bootstrap4-theme": "^1.0.4",
         "handy-notification": "^1.2.8",
         "select2": "^4.0.6-rc.1",
         "turbolinks": "^5.2.0"
