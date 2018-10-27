@@ -20,6 +20,7 @@
         "vue": "^2.5.17"
     },
     "dependencies": {
+        "handy-notification": "^1.2.8",
         "turbolinks": "^5.2.0"
     }
 }
