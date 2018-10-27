@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "handy-notification": "^1.2.8",
+        "select2": "^4.0.6-rc.1",
         "turbolinks": "^5.2.0"
     }
 }
