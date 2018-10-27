@@ -12,23 +12,25 @@ class AnimeController extends Controller
         $animes = Anime::orderBy('created_at', 'desc')->paginate(10);
         return view('animes.index', compact('animes'));
     }
-
+    
     public function create()
     {
         $anime = new Anime();
-        return view('animes.create', compact('anime'));
+        $genders = Anime::getGenders();
+        return view('animes.create', compact('anime', 'genders'));
     }
-
+    
     public function store()
     {
-        $this->validate(request(), ['name' => 'required', 'image' => 'required', 'year' => 'required']);
-        $anime = Anime::create(['name' => request('name'), 'image' => request('image'), 'year' => request('year'), 'gender' => request('gender')]);
+        $this->validate(request(), ['name' => 'required', 'image' => 'required', 'year' => 'required', 'genders' => 'required']);
+        $anime = Anime::create(['name' => request('name'), 'image' => request('image'), 'year' => request('year'), 'gender' => join(' ', request('genders'))]);
         return redirect()->route('animes.index')
         ->with('message', 'The anime has created');
     }
     
     public function edit(Anime $anime) {
-        return view('animes.edit', compact('anime'));
+        $genders = Anime::getGenders();
+        return view('animes.edit', compact('anime', 'genders'));
     }
     
     public function update(Anime $anime )
@@ -43,6 +45,7 @@ class AnimeController extends Controller
     {
         $anime->delete();
         return redirect()->route('animes.index')
-            ->with('message', 'The anime has destroy');
+            ->with('message', 'The anime was eliminated');
     }
+
 }

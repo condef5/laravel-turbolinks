@@ -12,8 +12,17 @@
 
 <div class="form-group">
     <label for="gender">Gender:</label>
-    <input type="text" class="form-control" id="gender" name="gender" value="{{ old('gender', $anime->gender) }}" required>
+    <select class="select2 form-control" name="genders[]" multiple="multiple">
+        @foreach ($genders as $gender )
+            <option 
+                value="{{ $gender }}"
+                {{ in_array($gender, explode(" ", $anime->gender)) ? 'selected' : ''}}>
+                {{ $gender }}
+            </option>
+        @endforeach
+    </select>
 </div>
+
 
 <div class="form-group">
     <label for="url">Image:</label>
