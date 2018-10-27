@@ -85,5 +85,7 @@
             @yield('content')
         </main>
     </div>
+    @include('partials.notification')
+
 </body>
 </html>
