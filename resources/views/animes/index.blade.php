@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <table class="table">
-                <thead>
+                <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
