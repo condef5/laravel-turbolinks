@@ -9,19 +9,27 @@ Turbolinks.start()
 window.Vue = vue
 window.Notify = Notify
 
-$(document).ready(function() {
+// $(document).ready(function() {
+//     $('.select2').select2({
+//         placeholder: {
+//             id: '-1', // the value of the option
+//             text: 'Select an option'
+//         },
+//         theme: "bootstrap4",
+//         tags: true
+//     });
+// });
+
+document.addEventListener("turbolinks:load", function() {
     $('.select2').select2({
         placeholder: {
             id: '-1', // the value of the option
             text: 'Select an option'
         },
-        theme: "bootstrap4"
+        theme: "bootstrap4",
+        tags: true
     });
-});
-
-// document.addEventListener("turbolinks:load", function() {
-//     $('.select2').select2();
-// })
+})
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 

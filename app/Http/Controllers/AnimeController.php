@@ -35,7 +35,7 @@ class AnimeController extends Controller
     
     public function update(Anime $anime )
     {
-        $this->validate(request(), ['name' => 'required', 'gender' => 'required', 'year' => 'required', 'image' => 'required']);
+        $this->validate(request(), ['name' => 'required', 'image' => 'required', 'year' => 'required', 'genders' => 'required']);
         $anime->update(request(['name', 'year', 'gender', 'image']));
         return redirect()->route('animes.index')
         ->with('message', 'The anime has updated');
